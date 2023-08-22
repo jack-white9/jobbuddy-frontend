@@ -2,7 +2,7 @@ import "./App.css";
 import ImageContent from "./components/ImageContent/ImageContent";
 import MainContent from "./components/MainContent/MainContent";
 
-function App() {
+function App(): JSX.Element {
   return (
     <section className="page-container">
       <MainContent />

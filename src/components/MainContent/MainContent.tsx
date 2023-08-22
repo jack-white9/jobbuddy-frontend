@@ -1,7 +1,7 @@
 import "./MainContent.css";
 import TextArea from "../TextArea/TextArea";
 
-function MainContent() {
+function MainContent(): JSX.Element {
   return (
     <div className="main-content-container">
       <h1 className="main-content-title">

@@ -1,7 +1,7 @@
 import "./ImageContent.css";
 import coffee from "../../assets/undraw_coffee_graphic.svg";
 
-function ImageContent() {
+function ImageContent(): JSX.Element {
   return (
     <div className="image-content-container">
       <img src={coffee} alt="Three cartoon characters drinking coffee" />
