@@ -4,6 +4,18 @@
   resize: none;
   border-width: 1px;
   border-radius: 6px;
-  width: 75%;
+  /* width: 75%; */
   height: 35vh;
+}
+
+.textarea-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.textarea-button {
+  width: fit-content;
+  margin-top: 1rem;
+  align-self: flex-end;
 }

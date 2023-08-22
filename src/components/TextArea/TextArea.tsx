@@ -1,22 +1,26 @@
 import "./TextArea.css";
 import { useState } from "react";
+import getDescriptionKeywords from "../../api/getDescriptionKeywords";
 
 function TextArea(): JSX.Element {
   const [text, setText] = useState<string>("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log(text);
+    const data = await getDescriptionKeywords(text);
+    console.log(data);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="textarea-form" onSubmit={handleSubmit}>
       <textarea
         className="textarea-textarea"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">Submit</button>
+      <button className="textarea-button" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
