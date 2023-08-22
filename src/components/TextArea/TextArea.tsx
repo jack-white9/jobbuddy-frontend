@@ -2,13 +2,22 @@ import "./TextArea.css";
 import { useState } from "react";
 import getDescriptionKeywords from "../../api/getDescriptionKeywords";
 
-function TextArea(): JSX.Element {
+type TextAreaProps = {
+  setIsFormSubmitted: (isFormSubmitted: boolean) => void;
+  setKeywords: (keywords: string[]) => void;
+};
+
+function TextArea({
+  setIsFormSubmitted,
+  setKeywords,
+}: TextAreaProps): JSX.Element {
   const [text, setText] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const data = await getDescriptionKeywords(text);
-    console.log(data);
+    setIsFormSubmitted(true);
+    setKeywords(data);
   }
 
   return (

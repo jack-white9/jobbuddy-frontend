@@ -1,17 +1,11 @@
 import { getDescriptionKeywordsUrl } from "./endpoints";
 
-type DescriptionKeywords = {
-  role: string;
-  content: string;
-};
-
-async function getDescriptionKeywords(
-  description: string
-): Promise<DescriptionKeywords> {
+async function getDescriptionKeywords(description: string): Promise<string[]> {
   const queryParams = new URLSearchParams({ message: description });
-  const data = await fetch(getDescriptionKeywordsUrl + queryParams);
+  const data = await fetch(getDescriptionKeywordsUrl + "?" + queryParams);
   const json = await data.json();
-  return json;
+  const keywords: string[] = json.content.split("\n");
+  return keywords;
 }
 
 export default getDescriptionKeywords;
