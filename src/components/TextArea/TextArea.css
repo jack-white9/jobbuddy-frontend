@@ -1,0 +1,9 @@
+.textarea-textarea {
+  background-color: #ffffff;
+  color: #242424;
+  resize: none;
+  border-width: 1px;
+  border-radius: 6px;
+  width: 75%;
+  height: 35vh;
+}
