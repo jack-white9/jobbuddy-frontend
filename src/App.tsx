@@ -4,10 +4,12 @@ import MainContent from "./components/MainContent/MainContent";
 
 function App(): JSX.Element {
   return (
-    <section className="page-container">
-      <MainContent />
-      <ImageContent />
-    </section>
+    <div className="root-container">
+      <section className="page-container">
+        <MainContent />
+        <ImageContent />
+      </section>
+    </div>
   );
 }
 

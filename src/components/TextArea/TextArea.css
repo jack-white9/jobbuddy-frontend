@@ -4,15 +4,30 @@
   resize: none;
   border-width: 1px;
   border-radius: 6px;
-  /* width: 75%; */
   height: 35vh;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
+
+.textarea-textarea:focus {
+  outline: none;
+}
+
 
 .textarea-form {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  width: 90%;
 }
+
+@media (min-width:961px) {
+  .textarea-form {
+    width: 75%;
+  }
+}
+
 
 .textarea-button {
   width: fit-content;
