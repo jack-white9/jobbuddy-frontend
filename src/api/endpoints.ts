@@ -3,8 +3,7 @@ let baseApiUrl: string = "";
 if (import.meta.env.VITE_ENV === "development") {
   baseApiUrl = "http://localhost:80/api";
 } else {
-  baseApiUrl =
-    "https://jobbuddy-backend-dev.ap-southeast-2.elasticbeanstalk.com/api";
+  baseApiUrl = `${import.meta.env.VITE_PROXY}/${import.meta.env.VITE_API}`;
 }
 
 // endpoints
